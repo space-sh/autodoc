@@ -1,0 +1,46 @@
+#
+# Copyright 2016-2017 Blockie AB
+#
+# This file is part of Space.
+#
+# Space is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation version 3 of the License.
+#
+# Space is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Space.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+---
+_env:
+  - GENERATE_TOC: ${GENERATE_TOC-0}
+  - GENERATE_VARIABLES: ${GENERATE_VARIABLES-1}
+
+_info:
+    title: Autodoc: code documentation exporter
+    desc:|
+        Exports code documentation from shell script source files.
+
+module:
+    _info:
+        title: Generate module code documentation and export as a Markdown file
+        desc:|
+            Takes a module shell script code as input, parse all its comments and generate a
+            Markdown formatted documentation file as intermediate file. This output gets appended
+            to a customized module header and it is exported to the current directory as result.
+            If GENERATE_TOC environment variable is set to 1, documentation will
+            automatically generate and include table of contents section.
+            If GENERATE_VARIABLES environment variable is set to 0, documentation will
+            not export the Variables section.
+            Parameters:
+                1: module shell script (Spacefile)
+            Example:
+                GENERATE_VARIABLES=0 GENERATE_TOC=0 space -m autodoc /module/ -- Spacefile.sh
+    _env:
+        - RUN: _EXPORT_MODULE
+
