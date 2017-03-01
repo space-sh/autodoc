@@ -26,7 +26,7 @@ _info:
     desc:|
         Exports code documentation from shell script source files.
 
-module:
+export:
     _info:
         title: Generate module code documentation and export as a Markdown file
         desc:|
