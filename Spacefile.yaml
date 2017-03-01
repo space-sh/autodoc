@@ -19,7 +19,7 @@
 ---
 _env:
   - GENERATE_TOC: ${GENERATE_TOC-0}
-  - GENERATE_VARIABLES: ${GENERATE_VARIABLES-1}
+  - GENERATE_VARIABLES: ${GENERATE_VARIABLES-0}
 
 _info:
     title: Autodoc: code documentation exporter
