@@ -20,6 +20,18 @@
 # autodoc - Code documentation exporter for SpaceGal shell
 #
 
+#=============
+# GENERATE_DOC
+#
+# Output markdown file
+#
+# Parameters:
+#   $1: documentation name
+#
+# Returns:
+#   non-zero on failure
+#
+#=============
 _GENERATE_DOC()
 {
     SPACE_DEP="_to_lower"
@@ -276,6 +288,19 @@ _GENERATE_DOC()
     PRINT "Documentation exported to \"${_doc_save_name}\""
 }
 
+
+#=============
+# EXPORT_MODULE
+#
+# Main module documentation exporter
+#
+# Parameters:
+#   $1: documentation name
+#
+# Returns:
+#   non-zero on failure
+#
+#=============
 _EXPORT_MODULE()
 {
     SPACE_DEP="PRINT _GENERATE_DOC"
