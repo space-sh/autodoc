@@ -1,11 +1,5 @@
 # Autodoc
 
-Autodoc is a module for SpaceGal shell that generates Markdown documentation based on code comments surrounding global variables and procedures in shell scripts.
-
-
-## Dependencies
-Bash, cat, date, echo and rm.
-
 ## Usage
 
 ### Comments: Marking code
@@ -54,26 +48,3 @@ _pp_yaml()
 #.. 
 }
 ```
-
-### Generating documentation
-It is possible to generate a complete Table of Contents (TOC) automatically by setting the environment variable GENERATE_TOC=1 when running the command.
-```
-GENERATE_TOC=1 space /markdown/ -- <input_file>
-```
-
-Generate Markdown documentation for some `input_file`:
-```
-space -m autodoc /markdown/ -- <input_file>
-```
-
-Generate Markdown and HTML documentation for some `input_file`:
-```
-space -m autodoc /html/ -- <input_file>
-```
-
-It is also possible to use the short implicit form when calling from the autodoc directory:
-```
-space /markdown/ -- <input_file>
-```
-
-
