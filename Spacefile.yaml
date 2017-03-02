@@ -24,7 +24,7 @@ _env:
 _info:
     title: Autodoc: code documentation exporter
     desc:|
-        Exports code documentation from shell script source files.
+        Generates Markdown documentation based on code comments surrounding global variables and procedures in shell scripts.
 
 export:
     _info:
