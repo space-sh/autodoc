@@ -35,6 +35,7 @@ AUTODOC_DEP_INSTALL()
 
     PRINT "Checking for module dependencies." "info"
 
+    # shellcheck disable=2181
     if [ "$?" -eq 0 ]; then
         PRINT "Dependencies found." "ok"
     else
@@ -58,6 +59,7 @@ AUTODOC_DEP_INSTALL()
 AUTODOC_GENERATE_DOC()
 {
     SPACE_DEP="_to_lower"
+    # shellcheck disable=SC2034
     SPACE_ENV="GENERATE_TOC GENERATE_VARIABLES"
 
     if [ "$#" -eq 0 ]; then
@@ -326,6 +328,7 @@ AUTODOC_GENERATE_DOC()
 #=============
 AUTODOC_EXPORT_MODULE()
 {
+    # shellcheck disable=SC2034
     SPACE_DEP="PRINT AUTODOC_GENERATE_DOC"
 
     if [ "$#" -eq 0 ]; then
@@ -345,6 +348,7 @@ AUTODOC_EXPORT_MODULE()
     # EXTERNAL: cat
     cat -- "$@" | AUTODOC_GENERATE_DOC "${_doc_program_name}"
 
+    # shellcheck disable=2181
     if [ $? -ne 0 ]; then
         PRINT "Failed to generate documentation" "error"
         return 1
