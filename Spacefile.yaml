@@ -21,6 +21,12 @@ _env:
   - GENERATE_TOC: ${GENERATE_TOC-0}
   - GENERATE_VARIABLES: ${GENERATE_VARIABLES-0}
 
+_dep_install:
+    _info:
+        title: Install dependencies
+    _env:
+        - RUN: AUTODOC_DEP_INSTALL
+
 _info:
     title: Autodoc: code documentation exporter
     desc:|

@@ -21,6 +21,29 @@
 #
 
 #=============
+# AUTODOC_DEP_INSTALL
+#
+# Check for module dependencies
+#
+# Returns:
+# non-zero on failure
+#
+#=============
+AUTODOC_DEP_INSTALL()
+{
+    SPACE_DEP="OS_IS_INSTALLED PRINT"    # shellcheck disable=SC2034
+
+    PRINT "Checking for module dependencies." "info"
+
+    if [ "$?" -eq 0 ]; then
+        PRINT "Dependencies found." "ok"
+    else
+        PRINT "Failed finding dependencies." "error"
+        return 1
+    fi
+}
+
+#=============
 # GENERATE_DOC
 #
 # Output markdown file
