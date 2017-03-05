@@ -161,6 +161,7 @@ AUTODOC_GENERATE_DOC()
                     _trimmed_comments=${_trimmed_comments//_/\\_}
                     local _is_list=0
                     local _is_example=0
+                    # shellcheck disable=2162
                     while read comment; do
                         if [ "$comment" = "Parameters:" ] || [ "$comment" = "Returns:" ] || [ "$comment" = "Expects:" ]; then
                             printf "### %s  \n" "${comment}" >> "${_doc_save_path}${_doc_tmp_funs_name}"
@@ -232,7 +233,8 @@ AUTODOC_GENERATE_DOC()
 
                         local _trimmed_comments=${_comments//#}
                         _trimmed_comments=${_trimmed_comments//_/\\_}
-                        _trimmed_comments=$(echo ${_trimmed_comments})
+                        # shellcheck disable=2116
+                        _trimmed_comments=$(echo "${_trimmed_comments}")
                         local _curr_value=${BASH_REMATCH[2]//_/\\_}
                         printf "### Description  \n %s  \n" "${_trimmed_comments}" >> "${_doc_save_path}${_doc_tmp_vars_name}"
                         printf "### Default value  \n _%s_  \n" "$_curr_value" >> "${_doc_save_path}${_doc_tmp_vars_name}"
@@ -341,7 +343,7 @@ AUTODOC_EXPORT_MODULE()
 
     # Check if file exists
     if [ ! -f "$@" ]; then
-        PRINT "Failed to load $@" "error"
+        PRINT "Failed to load $*" "error"
         return 1
     fi
 
@@ -356,7 +358,9 @@ AUTODOC_EXPORT_MODULE()
 
     PRINT "Generating composed output..."
     local _line_counter=0
-    local _current_dir_name="$(basename $PWD)"
+    local _current_dir_name=
+    _current_dir_name=$(basename "$PWD")
+    # shellcheck disable=2027
     local _build_status_badge="[![build status](https://gitlab.com/space-sh/"${_current_dir_name}"/badges/master/build.svg)](https://gitlab.com/space-sh/"${_current_dir_name}"/commits/master)"
     local _spacefile_extension=".${_doc_program_name##*.}"
 
