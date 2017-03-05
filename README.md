@@ -23,7 +23,18 @@ Generates Markdown documentation based on code comments surrounding global varia
 
 # Functions 
 
-## \_GENERATE\_DOC()  
+## AUTODOC\_DEP\_INSTALL()  
+  
+  
+  
+Check for module dependencies  
+  
+### Returns:  
+- non-zero on failure  
+  
+  
+  
+## AUTODOC\_GENERATE\_DOC()  
   
 GENERATE\_DOC  
   
@@ -37,7 +48,7 @@ Output markdown file
   
   
   
-## \_EXPORT\_MODULE()  
+## AUTODOC\_EXPORT\_MODULE()  
   
 EXPORT\_MODULE  
   
