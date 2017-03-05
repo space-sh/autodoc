@@ -55,7 +55,7 @@ AUTODOC_DEP_INSTALL()
 #   non-zero on failure
 #
 #=============
-_GENERATE_DOC()
+AUTODOC_GENERATE_DOC()
 {
     SPACE_DEP="_to_lower"
     SPACE_ENV="GENERATE_TOC GENERATE_VARIABLES"
@@ -324,9 +324,9 @@ _GENERATE_DOC()
 #   non-zero on failure
 #
 #=============
-_EXPORT_MODULE()
+AUTODOC_EXPORT_MODULE()
 {
-    SPACE_DEP="PRINT _GENERATE_DOC"
+    SPACE_DEP="PRINT AUTODOC_GENERATE_DOC"
 
     if [ "$#" -eq 0 ]; then
         PRINT "missing input file to generate documentation from" "error"
@@ -343,7 +343,7 @@ _EXPORT_MODULE()
     fi
 
     # EXTERNAL: cat
-    cat -- "$@" | _GENERATE_DOC "${_doc_program_name}"
+    cat -- "$@" | AUTODOC_GENERATE_DOC "${_doc_program_name}"
 
     if [ $? -ne 0 ]; then
         PRINT "Failed to generate documentation" "error"

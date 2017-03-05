@@ -48,5 +48,5 @@ export:
             Example:
                 GENERATE_VARIABLES=0 GENERATE_TOC=0 space -m autodoc /module/ -- Spacefile.sh
     _env:
-        - RUN: _EXPORT_MODULE
+        - RUN: AUTODOC_EXPORT_MODULE
 
