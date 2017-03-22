@@ -1,16 +1,17 @@
 ---
+modulename: Autodoc
 title: /export/
 giturl: gitlab.com/space-sh/autodoc
 weight: 200
 ---
 # Autodoc module: Export
 
-Generates module code documentation and export as Markdown file.
+Generates module code documentation and export as _Markdown_ file.
 
 
 ## Example
 
-Change directory to any Space Module and run the following command to create an auto generated technical README file:
+Change directory to any _Space Module_ and run the following command to create an auto generated technical _README_ file for a given _Spacefile.sh_:
 ```sh
 space -m autodoc /export/ -- Spacefile.sh
 ```
