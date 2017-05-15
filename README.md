@@ -17,7 +17,7 @@ Generates Markdown documentation based on code comments surrounding global varia
 	Parameters:
 	    1: module shell script (Spacefile)
 	Example:
-	    GENERATE_VARIABLES=0 GENERATE_TOC=0 space -m autodoc /module/ -- Spacefile.sh
+	    space -m autodoc /export/ -- Spacefile.sh
 	
 
 
