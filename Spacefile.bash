@@ -17,7 +17,7 @@
 #
 
 #
-# autodoc - Code documentation exporter for SpaceGal shell
+# autodoc - Code documentation exporter for Space.sh
 #
 
 #=============
