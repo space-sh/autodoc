@@ -332,14 +332,18 @@ AUTODOC_EXPORT_MODULE()
 {
     # shellcheck disable=SC2034
     SPACE_DEP="PRINT AUTODOC_GENERATE_DOC"
+    SPACE_ENV="CWD"
 
     if [ "$#" -eq 0 ]; then
         PRINT "missing input file to generate documentation from" "error"
         return 1
     fi
 
+    PRINT "Base name: $@" "debug"
     local _doc_program_name=
     _doc_program_name=$(basename "$@")
+    PRINT "Documentation program name: $_doc_program_name" "debug"
+    PRINT "Current working directory: $CWD" "debug"
 
     # Check if file exists
     if [ ! -f "$@" ]; then
