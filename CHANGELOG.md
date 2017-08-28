@@ -1,6 +1,6 @@
 # Space Module change log - autodoc
 
-## [master - ]
+## [1.1.0 - 2017-08-28]
 
 + Add debugging information
 
