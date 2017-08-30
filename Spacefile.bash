@@ -344,7 +344,7 @@ AUTODOC_EXPORT_MODULE()
     _doc_program_name=$(basename "$@")
     PRINT "Documentation program name: $_doc_program_name" "debug"
     PRINT "Current working directory: $CWD" "debug"
-    PRINT "Printing working directory: `pwd`" "debug"
+    PRINT "Printing working directory: $(pwd)" "debug"
 
     # Check if file exists
     if [ ! -f "$@" ]; then
