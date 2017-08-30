@@ -332,6 +332,7 @@ AUTODOC_EXPORT_MODULE()
 {
     # shellcheck disable=SC2034
     SPACE_DEP="PRINT AUTODOC_GENERATE_DOC"
+    # shellcheck disable=SC2034
     SPACE_ENV="CWD"
 
     if [ "$#" -eq 0 ]; then
