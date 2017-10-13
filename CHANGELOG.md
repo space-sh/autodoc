@@ -1,5 +1,12 @@
 # Space Module change log - autodoc
 
+## [1.1.1 - 2017-10-13]
+
+* Change legacy backtick usage to command substitution
+
+* Suppress false positive warnings
+
+
 ## [1.1.0 - 2017-08-28]
 
 + Add debugging information
