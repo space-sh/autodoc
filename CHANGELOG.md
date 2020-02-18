@@ -1,5 +1,10 @@
 # Space Module change log - autodoc
 
+## [1.1.2 - 2020-02-18]
+
+* Update build status badge link to match latest GitLab settings
+
+
 ## [1.1.1 - 2017-10-13]
 
 * Change legacy backtick usage to command substitution

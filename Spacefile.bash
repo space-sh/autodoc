@@ -367,7 +367,7 @@ AUTODOC_EXPORT_MODULE()
     local _current_dir_name=
     _current_dir_name=$(basename "$PWD")
     # shellcheck disable=2027
-    local _build_status_badge="[![build status](https://gitlab.com/space-sh/"${_current_dir_name}"/badges/master/build.svg)](https://gitlab.com/space-sh/"${_current_dir_name}"/commits/master)"
+    local _build_status_badge="[![build status](https://gitlab.com/space-sh/"${_current_dir_name}"/badges/master/pipeline.svg)](https://gitlab.com/space-sh/"${_current_dir_name}"/commits/master)"
     local _spacefile_extension=".${_doc_program_name##*.}"
 
     printf "# " > "${_doc_program_name}_README" 2>&1
