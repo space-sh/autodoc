@@ -1,4 +1,4 @@
-# Autodoc: code documentation exporter | [![build status](https://gitlab.com/space-sh/space-module-autodoc/badges/master/build.svg)](https://gitlab.com/space-sh/space-module-autodoc/commits/master)
+# Autodoc: code documentation exporter | [![build status](https://gitlab.com/space-sh/autodoc/badges/master/pipeline.svg)](https://gitlab.com/space-sh/autodoc/commits/master)
 
 Generates Markdown documentation based on code comments surrounding global variables and procedures in shell scripts.
 
